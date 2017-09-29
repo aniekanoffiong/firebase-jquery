@@ -7,6 +7,7 @@
         crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             margin: 0;
@@ -104,30 +105,30 @@
     </div>
 
     <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-sm vertical-align-center" role="document">
-            <div class="modal-content ">
-                <div class="modal-header no-border-bottom">
-                    <h4 class="modal-title text-center bold" id="myModalLabel">Sign In</h4>
-                </div>
-                <form id="food-create-form" enctype="multipart/form-data">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-sm vertical-align-center" role="document">
+                <div class="modal-content ">
+                    <div class="modal-header no-border-bottom">
+                        <h4 class="modal-title text-center bold" id="myModalLabel">Sign In</h4>
+                    </div>
 
                     <div class="modal-body">
-                        <div class="form-group">
-                            <label for="name" class="control-label">Email</label>
-                            <input type="email" id="email" name="email" value="" class="form-control form-control-line" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <label for="name" class="control-label">Password</label>
-                            <input type="password" id="password" name="password" value="" class="form-control form-control-line" placeholder="Password">
-                        </div>
+                        <form id="food-create-form" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="name" class="control-label">Email</label>
+                                <input type="email" id="email" name="email" value="" class="form-control form-control-line" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="control-label">Password</label>
+                                <input type="password" id="password" name="password" value="" class="form-control form-control-line" placeholder="Password">
+                            </div>
+                        </form>
+                        <div class="clear"></div>
+                        <button type="button" type="submit" class="btn btn-primary center-block" id="sign-in-btn">Sign In</button>
+                        <br />
+                        <button type="button" type="submit" class="btn btn-primary btn-block" id="signInWithGoogle"><Span class="fa fa-facebook"></span>&nbsp; &nbsp; Sign In With Facebook</button>
+                        <button type="button" type="submit" class="btn btn-danger btn-block" id="signInWithFacebook"><Span class="fa fa-google"></span>&nbsp; &nbsp; Sign In With Google</button>
                     </div>
-                </form>
-                <div class="clear"></div>
-                <button type="button" type="submit" class="btn btn-primary center-block" id="sign-in-btn">Sign In</button>
-                <br />
-                <div class="col-md-10 col-md-offset-1">
-                    <button type="button" type="submit" class="btn btn-primary btn-block" id="signInWithGoogle"><Span class="fa fa-facebook"></span>&nbsp; &nbsp; Sign In With Facebook</button>
-                    <button type="button" type="submit" class="btn btn-danger btn-block" id="signInWithFacebook"><Span class="fa fa-google"></span>&nbsp; &nbsp; Sign In With Google</button>
                 </div>
             </div>
         </div>
