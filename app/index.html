@@ -235,6 +235,7 @@
 
             $('a#logout-btn').click(function () {
                 firebase.auth().signOut().then(function() {
+                    $('div.food-listing').html('');                    
                     $('#bs-example-navbar-collapse-1 a#welcome-name').text('Welcome');
                     $('#bs-example-navbar-collapse-1 a#welcome-name').append('<span class="caret"></span>');
                 }).catch(function(error) {
@@ -261,7 +262,7 @@
                 foodCountRef.once('value').then(function (snapshot) {
                     snapshot.forEach(function (childSnapshot) {
                         $('div.food-listing')
-                            .append('<div class="col-sm-6 col-md-4 food-item-listed"  id="' + childSnapshotkey + '"><div class="thumbnail">' +
+                            .append('<div class="col-sm-6 col-md-4 food-item-listed"  id="' + childSnapshot.key + '"><div class="thumbnail">' +
                             '<img src="' + childSnapshotval().food_image + '" alt="food-item"><div class="caption text-center">' +
                             '<h3>' + childSnapshotval().food_name + '</h3><p>' + childSnapshotval().food_prize + '</p>' +
                             '<button type="button" id="' + childSnapshot.key + '" class="btn btn-danger btn-sm center-block remove-food">Remove</button></div></div></div>');
